@@ -1,0 +1,34 @@
+<%- include('../partials/head'); %> 
+<%- include('../partials/navbar'); %>
+    
+
+<a href="/api/articles">⬅️ Go back</a>
+<article class="card mt-4 container">
+  <header>
+    <h1 class="card-title"><%= article.title %></h1>
+    <div class="byline">
+      <address class="author card-text">
+        By
+        <a rel="author" href="/api/articles/<%= article.id %>"><%= article.author %></a>
+      </address>
+      on
+      <time pubdate datetime="<% article.createdAt %>"
+        ><%= article.createdAt %></time
+      >
+    </div>
+  </header>
+  <div class="article-content card-body"><%= article.description %></div>
+  <div class="container d-flex gap-5">
+    <form action="/api/articles/<%= article.id %>?_method=DELETE" method="post">
+      <button class="btn btn-danger mb-3">Delete</button>
+    </form>
+    <button class="btn btn-primary m-0">
+      <a href="/api/articles/<%= article.id %>/edit" class="text-light" style="text-decoration: none ; margin: 0; padding: 0;">Edit</a>
+    </button>
+  </div>
+  <div class="mapouter mt-5 mb-5"><div class="gmap_canvas"><iframe width="218" height="123" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a><br><style>.mapouter{position:relative;text-align:right;height:123px;width:218px;}</style><a href="https://www.embedgooglemap.net">google maps code for wordpress</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:123px;width:218px;}</style></div></div>
+
+</article>
+
+</body>
+</html>

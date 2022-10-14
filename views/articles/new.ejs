@@ -1,0 +1,32 @@
+<%- include('../partials/head'); %>
+<%- include('../partials/navbar'); %>
+
+<div class="container mt-5">
+
+  <div class="form-box">
+    <h1>Add new Article</h1>
+  <form action="/api/articles/" method="post">
+      <div class="form-group">
+        <label for="name">Title</label>
+        <input class="form-control" id="name" type="text" name="title">
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input class="form-control" id="author" type="text" name="author">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" id="address" type="text" name="address">
+      </div>
+      <div class="form-group">
+        <label for="description">Content</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </div>  
+  </form>
+</div>
+</div>
+
+</body>
+</html>

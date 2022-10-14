@@ -1,0 +1,35 @@
+<%- include('../partials/head'); %>
+<%- include('../partials/navbar'); %>
+
+<div class="container">
+    <h1>All articles</h1>
+    <button class="btn btn-success">
+      <a href="/api/articles/new" class="text-light" style="text-decoration: none;">Add New Article</a>
+    </button>
+
+      <% for(let article of articles) {%>
+       
+      <article class="card mt-4 container">
+        <header>
+          <h1 class="card-title"><%= article.title %></h1>
+          <div class="byline">
+            <address class="author card-text">
+              By
+              <a rel="author" href="/api/articles/<%= article.id %>"><%= article.author %></a>
+            </address>
+            on
+            <time pubdate datetime="<% article.createdAt %>"
+              ><%= article.createdAt %></time
+            >
+          </div>
+        </header>
+        <div class="article-content card-body"><%= article.description %></div>
+        <form action="/api/articles/<%= article.id %>?_method=DELETE" method="post">
+          <button class="btn btn-primary mb-3">Delete</button>
+        </form>
+        <a href="/api/articles/<%= article.id %>/edit">Edit</a>
+      </article>
+      <% } %>
+    </div>
+  </body>
+</html>

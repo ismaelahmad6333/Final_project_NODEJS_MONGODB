@@ -1,0 +1,29 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Tokyo Vera Lusso",
+        "description": "qwertty qwerty qwerty qwerty",
+        "price": 549,
+        "category": ["women", "men", "kids"],
+        "discountPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "brand": "Lusso",
+        "images": ["urlImage1234567.com"]
+      },
+      {
+        "id": 2,
+        "title": "Paris Vera Lusso",
+        "description": "qwertty qwerty qwerty qwerty",
+        "price": 549,
+        "category": ["women", "men", "kids"],
+        "discountPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "brand": "Lusso",
+        "images": ["urlImage1234567.com"]
+      }
+    ]
+  
+}
